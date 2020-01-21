@@ -43,7 +43,7 @@ installed on Raspberry Pi.
 > :information_source: **Caution:** The official docker images of FIWARE GEs are supported on the x86_64 platform.
 > The docker images for aarch64 are unofficial. If you encounter any error running the aarch64 docker images, you
 > should clarify whether the error depends on aarch64 or not yourself. So, you should check if the error is
-> reproduced on the x86_64 platform.
+> reproduced on the x86_64 platform with the official image.
 
 # Prerequisites
 
@@ -59,7 +59,7 @@ Model		: Raspberry Pi 4 Model B Rev 1.2
 
 ## Ubuntu 19.10
 
-To write OS image of Ubuntu 19.10 arm64 to a microSD card follows the instructions
+To write OS image of Ubuntu 19.10 arm64 to a microSD card follow the instructions
 [here](https://wiki.ubuntu.com/ARM/RaspberryPi)
 
 ```
@@ -249,6 +249,25 @@ $ curl localhost:1026/version
 ```
 
 ## WireCloud
+
+### How to build WireCloud
+
+Run the following shell script to build WireCloud.
+
+```
+cd build/wirecloud1.3
+./biuld.sh
+```
+
+### How to run WireCloud
+
+Start up WireCloud with the `docker-compose.yml` file in `docker-wirecloud/1.3` directory.
+Go to `http://localhost/` or `http://<your Pi's IP address>/`.
+
+```
+cd build/wirecloud1.3/docker-wirecloud/1.3/
+sudo docker-compose up -d
+```
 
 ## Ngsiproxy
 
