@@ -215,8 +215,6 @@ version: "3"
 services:
   orion:
     image: orion:2.3.0
-    links:
-      - mongo
     ports:
       - "1026:1026"
     depends_on:
