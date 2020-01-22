@@ -1,4 +1,5 @@
 fiware-orion/
+context.Orion-LD/
 docker-wirecloud/
 ngsi-proxy/
 fiware-idm/
