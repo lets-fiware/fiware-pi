@@ -1,5 +1,6 @@
 fiware-orion/
 docker-wirecloud/
+ngsi-proxy/
 fiware-idm/
 fiware-pep-proxy/
 compose/

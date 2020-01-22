@@ -269,6 +269,13 @@ sudo docker-compose up -d
 
 ## Ngsiproxy
 
+Run the following shell script to build Ngsiproxy.
+
+```
+cd build/ngsiproxy1.2.0
+./biuld.sh
+```
+
 ## Keyrock
 
 Run the following shell script to build Keyrock.
