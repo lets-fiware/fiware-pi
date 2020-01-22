@@ -280,6 +280,13 @@ cd build/keyrock7.8.1
 
 ## Wilma
 
+Run the following shell script to build Wilma.
+
+```
+cd build/Wilma7.8.1
+./biuld.sh
+```
+
 # Pre-Built FIWARE GEs Docker Images
 
 -   [Orion 2.3.0](https://hub.docker.com/r/fisuda/orion)

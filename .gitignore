@@ -1,5 +1,6 @@
 fiware-orion/
 docker-wirecloud/
 fiware-idm/
+fiware-pep-proxy/
 compose/
 *.swp
