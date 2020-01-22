@@ -1,4 +1,8 @@
 fiware-orion/
+context.Orion-LD/
 docker-wirecloud/
+ngsi-proxy/
+fiware-idm/
+fiware-pep-proxy/
 compose/
 *.swp

@@ -20,6 +20,7 @@ The purpose of this project is to run FIWARE GEs on Raspberry Pi.
     -   [Docker Compose](#docker-compose)
 -   [How to build and run FIWARE GEs](#how-to-build-and-run-fiware-ges)
     -   [Orion](#orion)
+    -   [Orion-LD](#orion-ld)
     -   [WireCloud](#wirecloud)
     -   [Ngsiproxy](#ngsiproxy)
     -   [Keyrock](#keyrock)
@@ -215,8 +216,6 @@ version: "3"
 services:
   orion:
     image: orion:2.3.0
-    links:
-      - mongo
     ports:
       - "1026:1026"
     depends_on:
@@ -248,6 +247,60 @@ $ curl localhost:1026/version
 }
 ```
 
+## Orion-LD
+
+### How to build Orion-LD
+
+Run the following shell script to build Orion-LD.
+
+```
+cd build/orion-ld
+./biuld.sh
+```
+
+### How to run Orion-LD
+
+Start up Orion-LD and mongodb with the following docker-compose.yml file.
+The yml file is in build/orion-ld/context.Orion-LD/docker directory.
+
+```
+mongo:
+  image: mongo:3.6
+  command: --nojournal
+
+orion:
+  image: orion-ld
+  links:
+    - mongo
+  ports:
+    - "1026:1026"
+  command: -dbhost mongo
+```
+
+Run the following command to confirm that Orion-LD has been successfully built.
+
+```
+$ uname -a
+Linux raspberrypi4 5.3.0-1015-raspi2 #17-Ubuntu SMP Thu Dec 5 04:58:47 UTC 2019 aarch64 aarch64 aarch64 GNU/Linux
+$ curl localhost:1026/ngsi-ld/ex/v1/version
+{
+  "Orion-LD version": "post-v0.1.0",
+  "based on orion": "1.15.0-next",
+  "kbase version": "0.2",
+  "kalloc version": "0.2",
+  "kjson version": "0.2",
+  "boost version": "1_62",
+  "microhttpd version": "0.9.48-0",
+  "openssl version": "OpenSSL 1.1.0l  10 Sep 2019",
+  "mongo version": "1.1.3",
+  "rapidjson version": "1.0.2",
+  "libcurl version": "7.52.1",
+  "libuuid version": "UNKNOWN",
+  "branch": "develop",
+  "Next File Descriptor": 18
+}
+```
+
 ## WireCloud
 
 ### How to build WireCloud
@@ -271,15 +324,40 @@ sudo docker-compose up -d
 
 ## Ngsiproxy
 
+Run the following shell script to build Ngsiproxy.
+
+```
+cd build/ngsiproxy1.2.0
+./biuld.sh
+```
+
 ## Keyrock
 
+Run the following shell script to build Keyrock.
+
+```
+cd build/keyrock7.8.1
+./biuld.sh
+```
+
 ## Wilma
+
+Run the following shell script to build Wilma.
+
+```
+cd build/Wilma7.8.1
+./biuld.sh
+```
 
 # Pre-Built FIWARE GEs Docker Images
 
 -   [Orion 2.3.0](https://hub.docker.com/r/fisuda/orion)
 ```
 docker pull fisuda/orion:2.3.0
+```
+-   [Orion-LD](https://hub.docker.com/r/fisuda/orion-ld)
+```
+docker pull fisuda/orion-ld:latest
 ```
 -   [WireCloud 1.3](https://hub.docker.com/r/fisuda/wirecloud)
 ```
