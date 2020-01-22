@@ -271,6 +271,13 @@ sudo docker-compose up -d
 
 ## Keyrock
 
+Run the following shell script to build Keyrock.
+
+```
+cd build/keyrock7.8.1
+./biuld.sh
+```
+
 ## Wilma
 
 # Pre-Built FIWARE GEs Docker Images
