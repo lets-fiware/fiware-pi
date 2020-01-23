@@ -25,6 +25,7 @@ The purpose of this project is to run FIWARE GEs on Raspberry Pi.
     -   [Ngsiproxy](#ngsiproxy)
     -   [Keyrock](#keyrock)
     -   [Wilma](#wilma)
+    -   [Cygnus](#cygnus)
 -   [Pre-Built FIWARE GEs Docker Images](#pre-built-fiware-ges-docker-images)
 
 </details>
@@ -346,6 +347,15 @@ Run the following shell script to build Wilma.
 
 ```
 cd build/Wilma7.8.1
+./biuld.sh
+```
+
+## Cygnus
+
+Run the following shell script to build Cygnus.
+
+```
+cd build/cygnus1.17.1/
 ./biuld.sh
 ```
 

@@ -4,5 +4,6 @@ docker-wirecloud/
 ngsi-proxy/
 fiware-idm/
 fiware-pep-proxy/
+fiware-cygnus/
 compose/
 *.swp
