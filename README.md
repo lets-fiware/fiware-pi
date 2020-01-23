@@ -26,6 +26,7 @@ The purpose of this project is to run FIWARE GEs on Raspberry Pi.
     -   [Keyrock](#keyrock)
     -   [Wilma](#wilma)
     -   [Cygnus](#cygnus)
+    -   [STH-Comet](#sth-comet)
 -   [Pre-Built FIWARE GEs Docker Images](#pre-built-fiware-ges-docker-images)
 
 </details>
@@ -356,6 +357,15 @@ Run the following shell script to build Cygnus.
 
 ```
 cd build/cygnus1.17.1/
+./biuld.sh
+```
+
+## STH-Comet
+
+Run the following shell script to build STH-Comet.
+
+```
+cd build/sth-comet2.7.0
 ./biuld.sh
 ```
 
