@@ -27,6 +27,7 @@ The purpose of this project is to run FIWARE GEs on Raspberry Pi.
     -   [Wilma](#wilma)
     -   [Cygnus](#cygnus)
     -   [STH-Comet](#sth-comet)
+    -   [IoT Agent UL](#iot-agent-ul)
 -   [Pre-Built FIWARE GEs Docker Images](#pre-built-fiware-ges-docker-images)
 
 </details>
@@ -366,6 +367,15 @@ Run the following shell script to build STH-Comet.
 
 ```
 cd build/sth-comet2.7.0
+./biuld.sh
+```
+
+## IoT Agent UL
+
+Run the following shell script to build IoT Agent UL.
+
+```
+cd build/iotagent-ul1.12.0
 ./biuld.sh
 ```
 
