@@ -6,5 +6,7 @@ fiware-idm/
 fiware-pep-proxy/
 fiware-cygnus/
 fiware-sth-comet/
+iotagent-ul/
+iotagent-json/
 compose/
 *.swp

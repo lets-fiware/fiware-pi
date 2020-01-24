@@ -27,6 +27,8 @@ The purpose of this project is to run FIWARE GEs on Raspberry Pi.
     -   [Wilma](#wilma)
     -   [Cygnus](#cygnus)
     -   [STH-Comet](#sth-comet)
+    -   [IoT Agent UL](#iot-agent-ul)
+    -   [IoT Agent JSON](#iot-agent-json)
 -   [Pre-Built FIWARE GEs Docker Images](#pre-built-fiware-ges-docker-images)
 
 </details>
@@ -356,7 +358,7 @@ cd build/Wilma7.8.1
 Run the following shell script to build Cygnus.
 
 ```
-cd build/cygnus1.17.1/
+cd build/cygnus1.17.1
 ./biuld.sh
 ```
 
@@ -366,6 +368,24 @@ Run the following shell script to build STH-Comet.
 
 ```
 cd build/sth-comet2.7.0
+./biuld.sh
+```
+
+## IoT Agent UL
+
+Run the following shell script to build IoT Agent UL.
+
+```
+cd build/iotagent-ul1.12.0
+./biuld.sh
+```
+
+## IoT Agent JSON
+
+Run the following shell script to build IoT Agent JSON.
+
+```
+cd build/iotagent-json1.13.0
 ./biuld.sh
 ```
 
@@ -394,6 +414,30 @@ docker pull fisuda/idm:7.8.1
 -   [Wilma 7.8.1](https://hub.docker.com/r/fisuda/pep-proxy)
 ```
 docker pull fisuda/pep-proxy:7.8.1
+```
+-  [cygnus-common 1.17.1](https://hub.docker.com/r/fisuda/cygnus-common)
+```
+docker pull fisuda/cygnus-common:1.17.1
+```
+-  [cygnus-ngsi 1.17.1](https://hub.docker.com/r/fisuda/cygnus-ngsi)
+```
+docker pull fisuda/cygnus-ngsi:1.17.1
+```
+-  [cygnus-twitter 1.17.1](https://hub.docker.com/r/fisuda/cygnus-twitter)
+```
+docker pull fisuda/cygnus-twitter:1.17.1
+```
+-  [sth-comet 2.7.0](https://hub.docker.com/r/fisuda/sth-comet)
+```
+docker pull fisuda/sth-comet:2.7.0
+```
+-  [iotagent-ul 1.12.0](https://hub.docker.com/r/fisuda/iotagent-ul)
+```
+docker pull fisuda/iotagent-ul:1.12.0
+```
+-  [iotagent-json 1.13.0](https://hub.docker.com/r/fisuda/iotagent-json)
+```
+docker pull fisuda/iotagent-json:1.13.0
 ```
 
 ## Copyright and License
