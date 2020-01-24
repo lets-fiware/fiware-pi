@@ -356,7 +356,7 @@ cd build/Wilma7.8.1
 Run the following shell script to build Cygnus.
 
 ```
-cd build/cygnus1.17.1/
+cd build/cygnus1.17.1
 ./biuld.sh
 ```
 
