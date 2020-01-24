@@ -28,6 +28,7 @@ The purpose of this project is to run FIWARE GEs on Raspberry Pi.
     -   [Cygnus](#cygnus)
     -   [STH-Comet](#sth-comet)
     -   [IoT Agent UL](#iot-agent-ul)
+    -   [IoT Agent JSON](#iot-agent-json)
 -   [Pre-Built FIWARE GEs Docker Images](#pre-built-fiware-ges-docker-images)
 
 </details>
@@ -376,6 +377,15 @@ Run the following shell script to build IoT Agent UL.
 
 ```
 cd build/iotagent-ul1.12.0
+./biuld.sh
+```
+
+## IoT Agent JSON
+
+Run the following shell script to build IoT Agent JSON.
+
+```
+cd build/iotagent-json1.13.0
 ./biuld.sh
 ```
 
