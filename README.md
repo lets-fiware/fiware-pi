@@ -32,6 +32,7 @@ The purpose of this project is to run FIWARE GEs on Raspberry Pi.
 -   [Pre-Built FIWARE GEs Docker Images](#pre-built-fiware-ges-docker-images)
 -   [Third-party Docker Images](third-party-docker-images)
     -   [MySQL](#mysql)
+    -   [Elasticsearch](#elasticsearch)
 
 </details>
 
@@ -462,6 +463,15 @@ Run the following shell script to build MySQL 5.7.21.
 
 ```
 cd build/third-party/mysql-5.7.21
+./build.sh
+```
+
+## How to build Elasticsearch
+
+Run the following shell script to build Elasticsearch 2.4.
+
+```
+cd build/third-party/elasticsearch-2.4
 ./build.sh
 ```
 
