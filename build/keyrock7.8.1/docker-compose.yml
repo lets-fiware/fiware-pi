@@ -1,0 +1,41 @@
+version: "3.5"
+services:
+  keyrock:
+    image: idm:7.8.1
+    hostname: keyrock
+    depends_on:
+      - mysql-db
+    ports:
+      - "3000:3000"
+      - "443:443"
+    environment:
+      - DEBUG=idm:*
+      - IDM_DB_HOST=mysql-db
+      - IDM_HOST=http://localhost:3000
+      - IDM_PORT=3000
+      - IDM_DB_NAME=idm781
+      # Development use only 
+      # Use Docker Secrets for Sensitive Data
+      - IDM_DB_PASS=secret 
+      - IDM_DB_USER=root
+      - IDM_ADMIN_USER=admin
+      - IDM_ADMIN_EMAIL=admin@test.com
+      - IDM_ADMIN_PASS=1234
+
+  mysql-db:
+    restart: always
+    image: mysql:5.7.21
+    hostname: mysql-db
+    expose:
+      - "3306"
+    ports:
+      - "3306:3306"
+    environment:
+      # Development use only 
+      # Use Docker Secrets for Sensitive Data
+      - "MYSQL_ROOT_PASSWORD=secret"
+    volumes:
+      - ./mysql-db:/var/lib/mysql
+
+volumes:
+  mysql-db: ~

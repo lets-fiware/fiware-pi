@@ -322,7 +322,7 @@ Start up WireCloud with the `docker-compose.yml` file in `docker-wirecloud/1.3` 
 Go to `http://localhost/` or `http://<your Pi's IP address>/`.
 
 ```
-cd build/wirecloud1.3/docker-wirecloud/1.3/
+cd build/wirecloud1.3/docker-wirecloud/1.3
 sudo docker-compose up -d
 ```
 
@@ -337,11 +337,23 @@ cd build/ngsiproxy1.2.0
 
 ## Keyrock
 
+### How to build Keyrock
+
 Run the following shell script to build Keyrock.
 
 ```
 cd build/keyrock7.8.1
 ./biuld.sh
+```
+
+### How to run Keyrock
+
+Start up Keyrock with the `docker-compose.yml` file in `keyrock7.8.1` directory.
+Go to `http://localhost:3000/` or `http://<your Pi's IP address>:3000/`.
+
+```
+cd build/keyrock7.8.1
+sudo docker-compose up -d
 ```
 
 ## Wilma
