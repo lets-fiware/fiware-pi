@@ -30,6 +30,8 @@ The purpose of this project is to run FIWARE GEs on Raspberry Pi.
     -   [IoT Agent UL](#iot-agent-ul)
     -   [IoT Agent JSON](#iot-agent-json)
 -   [Pre-Built FIWARE GEs Docker Images](#pre-built-fiware-ges-docker-images)
+-   [Third-party Docker Images](third-party-docker-images)
+    -   [MySQL](#mysql)
 
 </details>
 
@@ -450,6 +452,17 @@ docker pull fisuda/iotagent-ul:1.12.0
 -  [iotagent-json 1.13.0](https://hub.docker.com/r/fisuda/iotagent-json)
 ```
 docker pull fisuda/iotagent-json:1.13.0
+```
+
+# Third-party Docker Images
+
+## How to build MySQL
+
+Run the following shell script to build MySQL 5.7.21.
+
+```
+cd build/third-party/mysql-5.7.21
+./build.sh
 ```
 
 ## Copyright and License
