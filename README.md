@@ -30,7 +30,7 @@ The purpose of this project is to run FIWARE GEs on Raspberry Pi.
     -   [IoT Agent UL](#iot-agent-ul)
     -   [IoT Agent JSON](#iot-agent-json)
 -   [Pre-Built FIWARE GEs Docker Images](#pre-built-fiware-ges-docker-images)
--   [Third-party Docker Images](third-party-docker-images)
+-   [Third-party Docker Images](#third-party-docker-images)
     -   [MySQL](#mysql)
     -   [Elasticsearch](#elasticsearch)
 
@@ -457,7 +457,9 @@ docker pull fisuda/iotagent-json:1.13.0
 
 # Third-party Docker Images
 
-## How to build MySQL
+## MySQL
+
+### How to build MySQL
 
 Run the following shell script to build MySQL 5.7.21.
 
@@ -466,7 +468,9 @@ cd build/third-party/mysql-5.7.21
 ./build.sh
 ```
 
-## How to build Elasticsearch
+## Elasticsearch
+
+### How to build Elasticsearch
 
 Run the following shell script to build Elasticsearch 2.4.
 
