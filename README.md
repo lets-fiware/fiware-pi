@@ -30,6 +30,9 @@ The purpose of this project is to run FIWARE GEs on Raspberry Pi.
     -   [IoT Agent UL](#iot-agent-ul)
     -   [IoT Agent JSON](#iot-agent-json)
 -   [Pre-Built FIWARE GEs Docker Images](#pre-built-fiware-ges-docker-images)
+-   [Third-party Docker Images](#third-party-docker-images)
+    -   [MySQL](#mysql)
+    -   [Elasticsearch](#elasticsearch)
 
 </details>
 
@@ -322,7 +325,7 @@ Start up WireCloud with the `docker-compose.yml` file in `docker-wirecloud/1.3` 
 Go to `http://localhost/` or `http://<your Pi's IP address>/`.
 
 ```
-cd build/wirecloud1.3/docker-wirecloud/1.3/
+cd build/wirecloud1.3/docker-wirecloud/1.3
 sudo docker-compose up -d
 ```
 
@@ -337,11 +340,23 @@ cd build/ngsiproxy1.2.0
 
 ## Keyrock
 
+### How to build Keyrock
+
 Run the following shell script to build Keyrock.
 
 ```
 cd build/keyrock7.8.1
 ./biuld.sh
+```
+
+### How to run Keyrock
+
+Start up Keyrock with the `docker-compose.yml` file in `keyrock7.8.1` directory.
+Go to `http://localhost:3000/` or `http://<your Pi's IP address>:3000/`.
+
+```
+cd build/keyrock7.8.1
+sudo docker-compose up -d
 ```
 
 ## Wilma
@@ -438,6 +453,30 @@ docker pull fisuda/iotagent-ul:1.12.0
 -  [iotagent-json 1.13.0](https://hub.docker.com/r/fisuda/iotagent-json)
 ```
 docker pull fisuda/iotagent-json:1.13.0
+```
+
+# Third-party Docker Images
+
+## MySQL
+
+### How to build MySQL
+
+Run the following shell script to build MySQL 5.7.21.
+
+```
+cd build/third-party/mysql-5.7.21
+./build.sh
+```
+
+## Elasticsearch
+
+### How to build Elasticsearch
+
+Run the following shell script to build Elasticsearch 2.4.
+
+```
+cd build/third-party/elasticsearch-2.4
+./build.sh
 ```
 
 ## Copyright and License
