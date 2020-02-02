@@ -1,3 +1,0 @@
-s/centos:centos7.6.1810/centos:centos7/
-/scons \\/d
-/install epel-release/d

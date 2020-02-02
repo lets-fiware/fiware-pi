@@ -1,6 +1,0 @@
-    # Install scons from source
-    curl -kOL https://downloads.sourceforge.net/scons/scons-3.1.2.tar.gz && \
-    tar zxf scons-3.1.2.tar.gz && \
-    cd scons-3.1.2 && \
-    python setup.py install && \
-    cd .. && \
