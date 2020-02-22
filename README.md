@@ -68,7 +68,7 @@ Model		: Raspberry Pi 4 Model B Rev 1.2
 ## Ubuntu 19.10
 
 To write OS image of Ubuntu 19.10 arm64 to a microSD card follow the instructions
-[here](https://wiki.ubuntu.com/ARM/RaspberryPi)
+[here](https://ubuntu.com/download/raspberry-pi)
 
 ```
 xzcat ubuntu-19.10.1-preinstalled-server-arm64+raspi3.img.xz | sudo dd bs=4M of=/dev/mmcblk0
