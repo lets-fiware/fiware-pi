@@ -57,7 +57,8 @@ installed on Raspberry Pi.
 
 ## Hardware
 
-The target hardware is Raspberry Pi 4 with 4GB memory.
+The target devices are Raspberry Pi 3 and 4 which support the 64 bit ARM architecture (aarch64).
+For instance :
 
 ```
 Hardware	: BCM2835
@@ -65,21 +66,11 @@ Revision	: c03112
 Model		: Raspberry Pi 4 Model B Rev 1.2
 ```
 
-## Ubuntu 19.10
+### Linux OS
 
-To write OS image of Ubuntu 19.10 arm64 to a microSD card follow the instructions
-[here](https://ubuntu.com/download/raspberry-pi)
-
-```
-xzcat ubuntu-19.10.1-preinstalled-server-arm64+raspi3.img.xz | sudo dd bs=4M of=/dev/mmcblk0
-```
-
-Set the microSD card to Raspberry pi, boot up Ubuntu and print the OS version.
-
-```
-ubuntu@ubuntu:~$ uname -a
-Linux ubuntu 5.3.0-1014-raspi2 #16-Ubuntu SMP Tue Nov 26 11:18:23 UTC 2019 aarch64 aarch64 aarch64 GNU/Linux
-```
+As of now, there are not many options to use the 64 bit Linux on Raspberry Pi. To use Ubuntu 18.04 LTS or 19.10
+is better. You can get the OS image and find the install instruction 
+[here](https://ubuntu.com/download/raspberry-pi).
 
 
 ## fiware-pi.git
@@ -96,20 +87,19 @@ git clone https://github.com/lets-fiware/fiware-pi.git
 
 ### How to install
 
-To install Docker on Linux basically follow the instructions
-[here](https://docs.docker.com/install/linux/docker-ce/ubuntu/).
-As the docker binary for Ubuntu 19.10 (Eoan) is not provided, it is necessary to install the docker binary
-for Ubuntu 18.04 LTS (Bionic). Run the following script to install the docker engine.
+You can install Docker on Ubuntu by following the commands as shown:
 
 ```
 cd build/docker-engine/
-install-docker.sh
+sudo ./install-docker.sh
 ```
+
+The details to install Docker are [here](https://docs.docker.com/install/linux/docker-ce/ubuntu/).
+
 
 #### install script
 
 ```
-#!/bin/bash
 sudo cp -p /etc/apt/sources.list{,.bak}
 sudo apt-get update
 sudo apt-get install -y \
@@ -121,7 +111,7 @@ sudo apt-get install -y \
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository \
    "deb [arch=arm64] https://download.docker.com/linux/ubuntu \
-   bionic \
+   $(lsb_release -cs) \
    stable"
 sudo apt-get install -y docker-ce
 sudo docker version
@@ -168,11 +158,11 @@ Server: Docker Engine - Community
 ### How to install
 
 The Docker Compose binary for aarch64 is not provided. It is necessary to build it from its source code.
-Run the following script to install the docker compose. The script includes a patch to avoid a build error.
+Run the following script to install the docker compose.
 
 ```
 cd build/docker-compose/
-./build.sh
+sudo ./build.sh
 ```
 
 #### Build Script
