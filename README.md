@@ -4,7 +4,7 @@
 
 The purpose of this project is to run FIWARE GEs on Raspberry Pi.
 
--   このドキュメントは[日本語](README.ja.md)でもご覧いただけます。
+-   このドキュメントは[日本語](https://www.letsfiware.jp/dev/fiware-pi/)でもご覧いただけます。
 
 ## Contents
 
