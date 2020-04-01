@@ -197,21 +197,21 @@ OpenSSL version: OpenSSL 1.1.0l  10 Sep 2019
 Run the following shell script to build Orion. The script includes some patches.
 
 ```
-cd build/orion/orion-2.3.0
+cd build/orion/orion-2.4.0
 ./biuld.sh
 ```
 
 ### How to run Orion
 
 Start up Orion and mongodb with the following docker-compose.yml file.
-The yml file is in build/orion2.3.0 directory.
+The yml file is in build/orion/orion2.4.0 directory.
 
 ```
 version: "3"
 
 services:
   orion:
-    image: orion:2.3.0
+    image: orion:2.4.0
     ports:
       - "1026:1026"
     depends_on:
@@ -231,14 +231,14 @@ Linux raspberrypi4 5.3.0-1015-raspi2 #17-Ubuntu SMP Thu Dec 5 04:58:47 UTC 2019 
 $ curl localhost:1026/version
 {
 "orion" : {
-  "version" : "2.3.0",
-  "uptime" : "0 d, 0 h, 6 m, 13 s",
-  "git_hash" : "764f44bff1e73f819d4e0ac52e878272c375d322",
-  "compile_time" : "Sun Jan 19 04:41:20 UTC 2020",
+  "version" : "2.4.0",
+  "uptime" : "0 d, 0 h, 0 m, 23 s",
+  "git_hash" : "60659d18e9f682556c407794124325a75057cb94",
+  "compile_time" : "Wed Apr 1 10:41:58 UTC 2020",
   "compiled_by" : "root",
-  "compiled_in" : "c6d3814adf4c",
-  "release_date" : "Sun Jan 19 04:41:20 UTC 2020",
-  "doc" : "https://fiware-orion.rtfd.io/en/2.3.0/"
+  "compiled_in" : "bab284377211",
+  "release_date" : "Wed Apr 1 10:41:58 UTC 2020",
+  "doc" : "https://fiware-orion.rtfd.io/en/2.4.0/"
 }
 }
 ```
@@ -397,7 +397,7 @@ cd build/iotagent-json1.13.0
 
 -   [Orion 2.4.0](https://hub.docker.com/r/fisuda/orion)
 ```
-docker pull fisuda/orion:2.3.0
+docker pull fisuda/orion:2.4.0
 ```
 -   [Orion-LD](https://hub.docker.com/r/fisuda/orion-ld)
 ```
