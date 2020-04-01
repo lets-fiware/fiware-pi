@@ -197,7 +197,7 @@ OpenSSL version: OpenSSL 1.1.0l  10 Sep 2019
 Run the following shell script to build Orion. The script includes some patches.
 
 ```
-cd build/orion2.3.0
+cd build/orion/orion-2.3.0
 ./biuld.sh
 ```
 
@@ -395,7 +395,7 @@ cd build/iotagent-json1.13.0
 
 # Pre-Built FIWARE GEs Docker Images
 
--   [Orion 2.3.0](https://hub.docker.com/r/fisuda/orion)
+-   [Orion 2.4.0](https://hub.docker.com/r/fisuda/orion)
 ```
 docker pull fisuda/orion:2.3.0
 ```
