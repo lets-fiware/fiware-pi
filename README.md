@@ -198,7 +198,7 @@ Run the following shell script to build Orion. The script includes some patches.
 
 ```
 cd build/orion/orion-2.4.0
-./biuld.sh
+./build.sh
 ```
 
 ### How to run Orion
@@ -251,7 +251,7 @@ Run the following shell script to build Orion-LD.
 
 ```
 cd build/orion-ld
-./biuld.sh
+./build.sh
 ```
 
 ### How to run Orion-LD
@@ -305,7 +305,7 @@ Run the following shell script to build WireCloud.
 
 ```
 cd build/wirecloud1.3
-./biuld.sh
+./build.sh
 ```
 
 ### How to run WireCloud
@@ -324,7 +324,7 @@ Run the following shell script to build Ngsiproxy.
 
 ```
 cd build/ngsiproxy1.2.0
-./biuld.sh
+./build.sh
 ```
 
 ## Keyrock
@@ -335,7 +335,7 @@ Run the following shell script to build Keyrock.
 
 ```
 cd build/keyrock7.8.1
-./biuld.sh
+./build.sh
 ```
 
 ### How to run Keyrock
@@ -354,7 +354,7 @@ Run the following shell script to build Wilma.
 
 ```
 cd build/Wilma7.8.1
-./biuld.sh
+./build.sh
 ```
 
 ## Cygnus
@@ -363,7 +363,7 @@ Run the following shell script to build Cygnus.
 
 ```
 cd build/cygnus1.17.1
-./biuld.sh
+./build.sh
 ```
 
 ## STH-Comet
@@ -372,7 +372,7 @@ Run the following shell script to build STH-Comet.
 
 ```
 cd build/sth-comet2.7.0
-./biuld.sh
+./build.sh
 ```
 
 ## IoT Agent UL
@@ -381,7 +381,7 @@ Run the following shell script to build IoT Agent UL.
 
 ```
 cd build/iotagent-ul1.12.0
-./biuld.sh
+./build.sh
 ```
 
 ## IoT Agent JSON
@@ -390,7 +390,7 @@ Run the following shell script to build IoT Agent JSON.
 
 ```
 cd build/iotagent-json1.13.0
-./biuld.sh
+./build.sh
 ```
 
 # Pre-Built FIWARE GEs Docker Images
