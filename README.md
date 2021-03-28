@@ -419,13 +419,13 @@ docker pull fisuda/wirecloud:1.3
 ```
 docker pull fisuda/ngsiproxy:1.2.0
 ```
--   [Keyrock 7.8.2](https://hub.docker.com/r/fisuda/idm)
+-   [Keyrock 7.9.2](https://hub.docker.com/r/letsfiware/idm)
 ```
-docker pull fisuda/idm:7.8.1
+docker pull letsfiware/idm:7.9.2
 ```
--   [Wilma 7.8.2](https://hub.docker.com/r/fisuda/pep-proxy)
+-   [Wilma 7.9.2](https://hub.docker.com/r/letsfiware/pep-proxy)
 ```
-docker pull fisuda/pep-proxy:7.8.1
+docker pull letsfiware/pep-proxy:7.9.2
 ```
 -  [cygnus-common 1.18.3](https://hub.docker.com/r/fisuda/cygnus-common)
 ```
