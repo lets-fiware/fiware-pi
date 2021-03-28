@@ -169,7 +169,7 @@ sudo ./build.sh
 
 ```
 #!/bin/bash
-VERSION="${1:-1.25.4}"
+VERSION="${1:-1.27.4}"
 git clone -b "$VERSION" https://github.com/docker/compose.git
 cd compose/
 ./script/build/linux
@@ -182,9 +182,9 @@ Run the following command to confirm that docker compose has been successfully i
 
 ```
 $ docker-compose version
-docker-compose version 1.25.1, build cc93c976
-docker-py version: 4.1.0
-CPython version: 3.7.4
+docker-compose version 1.27.4, build 40524192
+docker-py version: 4.3.1
+CPython version: 3.7.7
 OpenSSL version: OpenSSL 1.1.0l  10 Sep 2019
 ```
 
