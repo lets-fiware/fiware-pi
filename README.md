@@ -322,7 +322,7 @@ Start up WireCloud with the `docker-compose.yml` file in `docker-wirecloud/1.3` 
 Go to `http://localhost/` or `http://<your Pi's IP address>/`.
 
 ```
-cd build/wirecloud1.3/docker-wirecloud/1.3
+cd build/wirecloud/wirecloud1.3/docker-wirecloud/1.3
 sudo docker-compose up -d
 ```
 
@@ -403,21 +403,21 @@ cd build/iotagent-json
 
 # Pre-Built FIWARE GEs Docker Images
 
--   [Orion 2.4.0](https://hub.docker.com/r/fisuda/orion)
+-   [Orion 2.6.0](https://hub.docker.com/r/letsfiware/orion)
 ```
-docker pull fisuda/orion:2.4.0
+docker pull letsfiware/orion:2.6.0
 ```
 -   [Orion-LD](https://hub.docker.com/r/fisuda/orion-ld)
 ```
 docker pull fisuda/orion-ld:latest
 ```
--   [WireCloud 1.3](https://hub.docker.com/r/fisuda/wirecloud)
+-   [WireCloud 1.3](https://hub.docker.com/r/letsfiware/wirecloud)
 ```
-docker pull fisuda/wirecloud:1.3
+docker pull letsfiware/wirecloud:1.3
 ```
--   [ngsiproxy 1.2.0](https://hub.docker.com/r/fisuda/ngsiproxy)
+-   [ngsiproxy 1.2.0](https://hub.docker.com/r/letsfiware/ngsiproxy)
 ```
-docker pull fisuda/ngsiproxy:1.2.0
+docker pull letsfiware/ngsiproxy:1.2.0
 ```
 -   [Keyrock 7.9.2](https://hub.docker.com/r/letsfiware/idm)
 ```
