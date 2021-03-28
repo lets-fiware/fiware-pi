@@ -1,11 +1,12 @@
 #!/bin/sh
-git clone -b 1.17.1 --depth=1 https://github.com/telefonicaid/fiware-cygnus.git
+VER=${1:-1.18.3}
+git clone -b $VER --depth=1 https://github.com/telefonicaid/fiware-cygnus.git
 cd fiware-cygnus/docker/cygnus-common/
 sed -i -f ../../../cygnus.patch.txt Dockerfile
-sudo docker build -t cygnus-common:1.17.1 .
+docker build -t cygnus-common:$VER .
 cd ../cygnus-ngsi/
 sed -i -f ../../../cygnus.patch.txt Dockerfile
-sudo docker build -t cygnus-ngsi:1.17.1 .
+docker build -t cygnus-ngsi:$VER .
 cd ../cygnus-twitter/
 sed -i -f ../../../cygnus.patch.txt Dockerfile
-sudo docker build -t cygnus-twitter:1.17.1 .
+docker build -t cygnus-twitter:$VER .

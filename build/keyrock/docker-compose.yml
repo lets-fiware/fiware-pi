@@ -1,7 +1,7 @@
 version: "3.5"
 services:
   keyrock:
-    image: idm:7.8.1
+    image: idm:7.8.2
     hostname: keyrock
     depends_on:
       - mysql-db
@@ -13,7 +13,7 @@ services:
       - IDM_DB_HOST=mysql-db
       - IDM_HOST=http://localhost:3000
       - IDM_PORT=3000
-      - IDM_DB_NAME=idm781
+      - IDM_DB_NAME=idm782
       # Development use only 
       # Use Docker Secrets for Sensitive Data
       - IDM_DB_PASS=secret 
