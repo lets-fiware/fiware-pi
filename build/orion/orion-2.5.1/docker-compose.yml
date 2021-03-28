@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  orion:
+    image: orion:2.5.0
+    ports:
+      - "1026:1026"
+    depends_on:
+      - mongo
+    command: -dbhost mongo
+
+  mongo:
+    image: mongo:3.6
+    command: --nojournal

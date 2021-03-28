@@ -14,7 +14,7 @@ The purpose of this project is to run FIWARE GEs on Raspberry Pi.
 -   [What's FIWARE GEs on Raspberry Pi](#whats-fiware-ges-on-raspberry-pi)
 -   [Prerequisites](#prerequisites)
     -   [Hardware](#hardware)
-    -   [Ubuntu 19.10](#ubuntu-1910)
+    -   [Linux OS](#linux-os)
     -   [fiware-pi.git](#fiware-pigit)
     -   [Docker Engine](#docker-engine)
     -   [Docker Compose](#docker-compose)
@@ -68,8 +68,8 @@ Model		: Raspberry Pi 4 Model B Rev 1.2
 
 ### Linux OS
 
-As of now, there are not many options to use the 64 bit Linux on Raspberry Pi. To use Ubuntu 18.04 LTS or 19.10
-is better. You can get the OS image and find the install instruction 
+As of now, there are not many options to use the 64 bit Linux on Raspberry Pi. To use Ubuntu 20.04 LTS is
+better. You can get the OS image and find the install instruction 
 [here](https://ubuntu.com/download/raspberry-pi).
 
 
@@ -312,7 +312,7 @@ $ curl localhost:1026/ngsi-ld/ex/v1/version
 Run the following shell script to build WireCloud.
 
 ```
-cd build/wirecloud1.3
+cd build/wirecloud/wirecloud1.3
 ./build.sh
 ```
 
@@ -331,7 +331,7 @@ sudo docker-compose up -d
 Run the following shell script to build Ngsiproxy.
 
 ```
-cd build/ngsiproxy1.2.0
+cd build/ngsiproxy/ngsiproxy1.2.0
 ./build.sh
 ```
 
@@ -342,17 +342,17 @@ cd build/ngsiproxy1.2.0
 Run the following shell script to build Keyrock.
 
 ```
-cd build/keyrock7.8.1
+cd build/keyrock
 ./build.sh
 ```
 
 ### How to run Keyrock
 
-Start up Keyrock with the `docker-compose.yml` file in `keyrock7.8.1` directory.
+Start up Keyrock with the `docker-compose.yml` file in `keyrock` directory.
 Go to `http://localhost:3000/` or `http://<your Pi's IP address>:3000/`.
 
 ```
-cd build/keyrock7.8.1
+cd build/keyrock
 sudo docker-compose up -d
 ```
 
@@ -361,7 +361,7 @@ sudo docker-compose up -d
 Run the following shell script to build Wilma.
 
 ```
-cd build/Wilma7.8.1
+cd build/Wilma
 ./build.sh
 ```
 
@@ -370,7 +370,7 @@ cd build/Wilma7.8.1
 Run the following shell script to build Cygnus.
 
 ```
-cd build/cygnus1.17.1
+cd build/cygnus
 ./build.sh
 ```
 
@@ -379,7 +379,7 @@ cd build/cygnus1.17.1
 Run the following shell script to build STH-Comet.
 
 ```
-cd build/sth-comet2.7.0
+cd build/sth-comet
 ./build.sh
 ```
 
@@ -388,7 +388,7 @@ cd build/sth-comet2.7.0
 Run the following shell script to build IoT Agent UL.
 
 ```
-cd build/iotagent-ul1.12.0
+cd build/iotagent-ul
 ./build.sh
 ```
 
@@ -397,15 +397,15 @@ cd build/iotagent-ul1.12.0
 Run the following shell script to build IoT Agent JSON.
 
 ```
-cd build/iotagent-json1.13.0
+cd build/iotagent-json
 ./build.sh
 ```
 
 # Pre-Built FIWARE GEs Docker Images
 
--   [Orion 2.6.0](https://hub.docker.com/r/letsfiware/orion)
+-   [Orion 2.4.0](https://hub.docker.com/r/fisuda/orion)
 ```
-docker pull letsfiware/orion:2.6.0
+docker pull fisuda/orion:2.4.0
 ```
 -   [Orion-LD](https://hub.docker.com/r/fisuda/orion-ld)
 ```
@@ -419,37 +419,37 @@ docker pull fisuda/wirecloud:1.3
 ```
 docker pull fisuda/ngsiproxy:1.2.0
 ```
--   [Keyrock 7.8.1](https://hub.docker.com/r/fisuda/idm)
+-   [Keyrock 7.8.2](https://hub.docker.com/r/fisuda/idm)
 ```
 docker pull fisuda/idm:7.8.1
 ```
--   [Wilma 7.8.1](https://hub.docker.com/r/fisuda/pep-proxy)
+-   [Wilma 7.8.2](https://hub.docker.com/r/fisuda/pep-proxy)
 ```
 docker pull fisuda/pep-proxy:7.8.1
 ```
--  [cygnus-common 1.17.1](https://hub.docker.com/r/fisuda/cygnus-common)
+-  [cygnus-common 1.18.3](https://hub.docker.com/r/fisuda/cygnus-common)
 ```
-docker pull fisuda/cygnus-common:1.17.1
+docker pull fisuda/cygnus-common:1.18.3
 ```
--  [cygnus-ngsi 1.17.1](https://hub.docker.com/r/fisuda/cygnus-ngsi)
+-  [cygnus-ngsi 1.18.3](https://hub.docker.com/r/fisuda/cygnus-ngsi)
 ```
-docker pull fisuda/cygnus-ngsi:1.17.1
+docker pull fisuda/cygnus-ngsi:1.18.3
 ```
--  [cygnus-twitter 1.17.1](https://hub.docker.com/r/fisuda/cygnus-twitter)
+-  [cygnus-twitter 1.18.3](https://hub.docker.com/r/fisuda/cygnus-twitter)
 ```
-docker pull fisuda/cygnus-twitter:1.17.1
+docker pull fisuda/cygnus-twitter:1.18.3
 ```
 -  [sth-comet 2.7.0](https://hub.docker.com/r/fisuda/sth-comet)
 ```
 docker pull fisuda/sth-comet:2.7.0
 ```
--  [iotagent-ul 1.12.0](https://hub.docker.com/r/fisuda/iotagent-ul)
+-  [iotagent-ul 1.13.0](https://hub.docker.com/r/fisuda/iotagent-ul)
 ```
-docker pull fisuda/iotagent-ul:1.12.0
+docker pull fisuda/iotagent-ul:1.13.0
 ```
--  [iotagent-json 1.13.0](https://hub.docker.com/r/fisuda/iotagent-json)
+-  [iotagent-json 1.14.0](https://hub.docker.com/r/fisuda/iotagent-json)
 ```
-docker pull fisuda/iotagent-json:1.13.0
+docker pull fisuda/iotagent-json:1.14.0
 ```
 
 # Third-party Docker Images
