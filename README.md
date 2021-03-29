@@ -383,21 +383,21 @@ cd build/sth-comet
 ./build.sh
 ```
 
-## IoT Agent UL
+## IoT Agent for a UltraLight 2.0 based protocol
 
 Run the following shell script to build IoT Agent UL.
 
 ```
-cd build/iotagent-ul
+cd build/iotagent-for-ul
 ./build.sh
 ```
 
-## IoT Agent JSON
+## IoT Agent for JSON
 
 Run the following shell script to build IoT Agent JSON.
 
 ```
-cd build/iotagent-json
+cd build/iotagent-for-json
 ./build.sh
 ```
 
@@ -427,29 +427,29 @@ docker pull letsfiware/idm:7.9.2
 ```
 docker pull letsfiware/pep-proxy:7.9.2
 ```
--  [cygnus-common 1.18.3](https://hub.docker.com/r/fisuda/cygnus-common)
+-  [cygnus-common 1.18.3](https://hub.docker.com/r/letsfiware/cygnus-common)
 ```
-docker pull fisuda/cygnus-common:1.18.3
+docker pull letsfiware/cygnus-common:1.18.3
 ```
--  [cygnus-ngsi 1.18.3](https://hub.docker.com/r/fisuda/cygnus-ngsi)
+-  [cygnus-ngsi 1.18.3](https://hub.docker.com/r/letsfiware/cygnus-ngsi)
 ```
-docker pull fisuda/cygnus-ngsi:1.18.3
+docker pull letsfiware/cygnus-ngsi:1.18.3
 ```
--  [cygnus-twitter 1.18.3](https://hub.docker.com/r/fisuda/cygnus-twitter)
+-  [cygnus-twitter 1.18.3](https://hub.docker.com/r/letsfiware/cygnus-twitter)
 ```
-docker pull fisuda/cygnus-twitter:1.18.3
+docker pull letsfiware/cygnus-twitter:1.18.3
 ```
--  [sth-comet 2.7.0](https://hub.docker.com/r/fisuda/sth-comet)
+-  [sth-comet 2.8.0](https://hub.docker.com/r/letsfiware/sth-comet)
 ```
-docker pull fisuda/sth-comet:2.7.0
+docker pull letsfiware/sth-comet:2.8.0
 ```
--  [iotagent-ul 1.13.0](https://hub.docker.com/r/fisuda/iotagent-ul)
+-  [iotagent-ul 1.13.0](https://hub.docker.com/r/letsfiware/iotagent-ul)
 ```
-docker pull fisuda/iotagent-ul:1.13.0
+docker pull letsfiware/iotagent-ul:1.13.0
 ```
--  [iotagent-json 1.14.0](https://hub.docker.com/r/fisuda/iotagent-json)
+-  [iotagent-json 1.17.0](https://hub.docker.com/r/letsfiware/iotagent-json)
 ```
-docker pull fisuda/iotagent-json:1.14.0
+docker pull letsfiware/iotagent-json:1.17.0
 ```
 
 # Third-party Docker Images
@@ -478,5 +478,5 @@ cd build/third-party/elasticsearch-2.4
 
 ## Copyright and License
 
-Copyright (c) 2020 Kazuhito Suda
+Copyright (c) 2020-2021 Kazuhito Suda
 Licensed under the MIT license.
