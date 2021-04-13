@@ -197,21 +197,21 @@ OpenSSL version: OpenSSL 1.1.0l  10 Sep 2019
 Run the following shell script to build Orion. The script includes some patches.
 
 ```
-cd build/orion/orion-2.6.0
+cd build/orion/orion-3.0.0
 ./build.sh
 ```
 
 ### How to run Orion
 
 Start up Orion and mongodb with the following docker-compose.yml file.
-The yml file is in build/orion/orion2.6.0 directory.
+The yml file is in build/orion/orion3.0.0 directory.
 
 ```
 version: "3"
 
 services:
   orion:
-    image: orion:2.6.0
+    image: letsfiware/orion/3.0.0
     ports:
       - "1026:1026"
     depends_on:
@@ -219,7 +219,7 @@ services:
     command: -dbhost mongo
 
   mongo:
-    image: mongo:3.6
+    image: mongo:4.4
     command: --nojournal
 ```
 
@@ -231,21 +231,23 @@ Linux raspberrypi4 5.4.0-1032-raspi #35-Ubuntu SMP PREEMPT Fri Mar 19 20:52:40 U
 $ curl localhost:1026/version
 {
 "orion" : {
-  "version" : "2.6.0",
-  "uptime" : "0 d, 0 h, 0 m, 9 s",
-  "git_hash" : "1ac27e059e900f17fb31df25d5a9b8976a60dded",
-  "compile_time" : "Sun Mar 28 01:05:00 UTC 2021",
+  "version" : "3.0.0",
+  "uptime" : "0 d, 0 h, 0 m, 11 s",
+  "git_hash" : "d6f8f4c6c766a9093527027f0a4b3f906e7f04c4",
+  "compile_time" : "Tue Apr 13 07:55:05 UTC 2021",
   "compiled_by" : "root",
-  "compiled_in" : "fc765dc4baf5",
-  "release_date" : "Sun Mar 28 01:05:00 UTC 2021",
-  "doc" : "https://fiware-orion.rtfd.io/en/2.6.0/",
+  "compiled_in" : "8110f8ee93aa",
+  "release_date" : "Tue Apr 13 07:55:05 UTC 2021",
+  "machine" : "aarch64",
+  "doc" : "https://fiware-orion.rtfd.io/en/3.0.0/",
   "libversions": {
-     "boost": "1_53",
-     "libcurl": "libcurl/7.29.0 NSS/3.53.1 zlib/1.2.7 libidn/1.28 libssh2/1.8.0",
+     "boost": "1_66",
+     "libcurl": "libcurl/7.61.1 OpenSSL/1.1.1g zlib/1.2.11 nghttp2/1.33.0",
      "libmicrohttpd": "0.9.70",
-     "openssl": "1.0.2k",
+     "openssl": "1.1",
      "rapidjson": "1.1.0",
-     "mongodriver": "legacy-1.1.2"
+     "mongoc": "1.17.4",
+     "bson": "1.17.4"
   }
 }
 }
@@ -403,9 +405,9 @@ cd build/iotagent-for-json
 
 # Pre-Built FIWARE GEs Docker Images
 
--   [Orion 2.6.0](https://hub.docker.com/r/letsfiware/orion)
+-   [Orion 3.0.0](https://hub.docker.com/r/letsfiware/orion)
 ```
-docker pull letsfiware/orion:2.6.0
+docker pull letsfiware/orion/3.0.0
 ```
 -   [Orion-LD](https://hub.docker.com/r/fisuda/orion-ld)
 ```
