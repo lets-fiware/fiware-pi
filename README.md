@@ -211,7 +211,7 @@ version: "3"
 
 services:
   orion:
-    image: letsfiware/orion/3.0.0
+    image: letsfiware/orion:3.0.0
     ports:
       - "1026:1026"
     depends_on:
@@ -407,7 +407,7 @@ cd build/iotagent-for-json
 
 -   [Orion 3.0.0](https://hub.docker.com/r/letsfiware/orion)
 ```
-docker pull letsfiware/orion/3.0.0
+docker pull letsfiware/orion:3.0.0
 ```
 -   [Orion-LD](https://hub.docker.com/r/fisuda/orion-ld)
 ```
