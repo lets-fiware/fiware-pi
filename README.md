@@ -204,14 +204,14 @@ cd build/orion/orion-3.0.0
 ### How to run Orion
 
 Start up Orion and mongodb with the following docker-compose.yml file.
-The yml file is in build/orion/orion3.0.0 directory.
+The yml file is in build/orion/orion-3.6.0 directory.
 
 ```
 version: "3"
 
 services:
   orion:
-    image: letsfiware/orion:3.0.0
+    image: letsfiware/orion:3.6.0
     ports:
       - "1026:1026"
     depends_on:
@@ -226,23 +226,22 @@ services:
 Run the following command to confirm that Orion has been successfully built.
 
 ```
-$ uname -a
-Linux raspberrypi4 5.4.0-1032-raspi #35-Ubuntu SMP PREEMPT Fri Mar 19 20:52:40 UTC 2021 aarch64 aarch64 aarch64 GNU/Linux
 $ curl localhost:1026/version
 {
 "orion" : {
-  "version" : "3.0.0",
-  "uptime" : "0 d, 0 h, 0 m, 11 s",
-  "git_hash" : "d6f8f4c6c766a9093527027f0a4b3f906e7f04c4",
-  "compile_time" : "Tue Apr 13 07:55:05 UTC 2021",
+  "version" : "3.6.0",
+  "uptime" : "0 d, 0 h, 0 m, 1 s",
+  "git_hash" : "973850279e63d58cb93dff751648af5ec6e05777",
+  "compile_time" : "Sun May 1 04:43:02 UTC 2022",
   "compiled_by" : "root",
-  "compiled_in" : "8110f8ee93aa",
-  "release_date" : "Tue Apr 13 07:55:05 UTC 2021",
+  "compiled_in" : "4e336511670a",
+  "release_date" : "Sun May 1 04:43:02 UTC 2022",
   "machine" : "aarch64",
-  "doc" : "https://fiware-orion.rtfd.io/en/3.0.0/",
+  "doc" : "https://fiware-orion.rtfd.io/en/3.6.0/",
   "libversions": {
-     "boost": "1_66",
-     "libcurl": "libcurl/7.61.1 OpenSSL/1.1.1g zlib/1.2.11 nghttp2/1.33.0",
+     "boost": "1_74",
+     "libcurl": "libcurl/7.74.0 OpenSSL/1.1.1n zlib/1.2.11 brotli/1.0.9 libidn2/2.3.0 libpsl/0.21.0 (+libidn2/2.3.0) libssh2/1.9.0 nghttp2/1.43.0 librtmp/2.3",
+     "libmosquitto": "2.0.12",
      "libmicrohttpd": "0.9.70",
      "openssl": "1.1",
      "rapidjson": "1.1.0",
