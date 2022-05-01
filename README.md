@@ -68,10 +68,9 @@ Model		: Raspberry Pi 4 Model B Rev 1.2
 
 ### Linux OS
 
-As of now, there are not many options to use the 64 bit Linux on Raspberry Pi. To use Ubuntu 20.04 LTS is
-better. You can get the OS image and find the install instruction 
-[here](https://ubuntu.com/download/raspberry-pi).
-
+To run FIWARE GEs using Docker on Raspberry Pi, we recommend using Raspberry Pi OS (Bullseye) or Ubuntu 22.04 LTS
+(Jammy Jellyfish). You can install Raspberry Pi OS or Ubuntu using Raspberry Pi Imager. See the install instruction
+[here](https://www.raspberrypi.com/software/).
 
 ## fiware-pi.git
 
@@ -83,38 +82,66 @@ sudo apt install -y git
 git clone https://github.com/lets-fiware/fiware-pi.git
 ```
 
-## Docker Engine
+## Docker
 
-### How to install
+### How to install Docker on Raspberry Pi OS
 
-You can install Docker on Ubuntu by following the commands as shown:
+You can install Docker Engine and Docker compose on Raspberry Pi OS by following the commands as shown:
 
 ```
-cd build/docker-engine/
-sudo ./install-docker.sh
+cd build/docker/
+./install-docker-on-debian.sh
 ```
 
-The details to install Docker are [here](https://docs.docker.com/install/linux/docker-ce/ubuntu/).
-
+The details to install Docker are [here](https://docs.docker.com/engine/install/debian/).
 
 #### install script
 
 ```
-sudo cp -p /etc/apt/sources.list{,.bak}
+#!/bin/sh
+sudo apt-get remove docker docker-engine docker.io containerd runc
 sudo apt-get update
-sudo apt-get install -y \
-    apt-transport-https \
+sudo apt-get -y install \
     ca-certificates \
     curl \
-    gnupg-agent \
-    software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository \
-   "deb [arch=arm64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
-sudo apt-get install -y docker-ce
-sudo docker version
+    gnupg \
+    lsb-release
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+```
+
+### How to install Docker on Ubuntu
+
+You can install Docker Engine and Docker compose on Ubuntu by following the commands as shown:
+
+```
+cd build/docker/
+./install-docker-on-ubuntu.sh
+```
+
+The details to install Docker are [here](https://docs.docker.com/engine/install/ubuntu/).
+
+#### install script
+
+```
+#!/bin/sh
+sudo apt-get remove docker docker-engine docker.io containerd runc
+sudo apt-get update
+sudo apt-get -y install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 
 ### How to run
@@ -124,68 +151,40 @@ Run the following command to confirm that docker engine has been successfully in
 ```
 ubuntu@ubuntu:~$ sudo docker version
 Client: Docker Engine - Community
- Version:           19.03.5
- API version:       1.40
- Go version:        go1.12.12
- Git commit:        633a0ea
- Built:             Wed Nov 13 07:27:46 2019
+ Version:           20.10.14
+ API version:       1.41
+ Go version:        go1.16.15
+ Git commit:        a224086
+ Built:             Thu Mar 24 01:47:16 2022
  OS/Arch:           linux/arm64
- Experimental:      false
+ Context:           default
+ Experimental:      true
 
 Server: Docker Engine - Community
  Engine:
-  Version:          19.03.5
-  API version:      1.40 (minimum version 1.12)
-  Go version:       go1.12.12
-  Git commit:       633a0ea
-  Built:            Wed Nov 13 07:26:16 2019
+  Version:          20.10.14
+  API version:      1.41 (minimum version 1.12)
+  Go version:       go1.16.15
+  Git commit:       87a90dc
+  Built:            Thu Mar 24 01:45:35 2022
   OS/Arch:          linux/arm64
   Experimental:     false
  containerd:
-  Version:          1.2.10
-  GitCommit:        b34a5c8af56e510852c35414db4c1f4fa6172339
+  Version:          1.5.11
+  GitCommit:        3df54a852345ae127d1fa3092b95168e4a88e2f8
  runc:
-  Version:          1.0.0-rc8+dev
-  GitCommit:        3e425f80a8c931f88e6d94a8c831b9d5aa481657
+  Version:          1.0.3
+  GitCommit:        v1.0.3-0-gf46b6ba
  docker-init:
-  Version:          0.18.0
-  GitCommit:        fec3683
+  Version:          0.19.0
+  GitCommit:        de40ad0
 ```
 
-
-## Docker Compose
-
-### How to install
-
-The Docker Compose binary for aarch64 is not provided. It is necessary to build it from its source code.
-Run the following script to install the docker compose.
+Run the following command to confirm that docker compose V2 has been successfully installed.
 
 ```
-cd build/docker-compose/
-sudo ./build.sh
-```
-
-#### Build Script
-
-```
-#!/bin/bash
-VERSION="${1:-1.27.4}"
-git clone -b "$VERSION" https://github.com/docker/compose.git
-cd compose/
-./script/build/linux
-cp dist/docker-compose-Linux-aarch64 /usr/local/bin/docker-compose
-```
-
-### How to run
-
-Run the following command to confirm that docker compose has been successfully installed.
-
-```
-$ docker-compose version
-docker-compose version 1.27.4, build 40524192
-docker-py version: 4.3.1
-CPython version: 3.7.7
-OpenSSL version: OpenSSL 1.1.0l  10 Sep 2019
+ubuntu@ubuntu:~$ sudo docker compose version
+Docker Compose version v2.3.3
 ```
 
 # How to build and run FIWARE GEs
@@ -197,7 +196,7 @@ OpenSSL version: OpenSSL 1.1.0l  10 Sep 2019
 Run the following shell script to build Orion. The script includes some patches.
 
 ```
-cd build/orion/orion-3.0.0
+cd build/orion/orion-3.6.0
 ./build.sh
 ```
 
