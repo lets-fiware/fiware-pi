@@ -1,1 +1,2 @@
+- Update documentation about installing Docker (#30)
 - Update Orion to 3.6.0 (#29)
