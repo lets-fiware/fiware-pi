@@ -20,7 +20,7 @@ jobs:
           path-to-signatures: 'signatures/version1/cla.json'
           path-to-document: 'https://github.com/lets-fiware/fiware-pi/blob/master/FIWARE-Pi-individual-cla.pdf' # e.g. a CLA or a DCO document
           # branch should not be protected
-          branch: 'main'
+          branch: 'master'
           allowlist: fisuda,bot*
           use-dco-flag: false #'Set this to true if you want to use a dco instead of a cla'
           
