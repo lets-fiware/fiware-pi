@@ -1,5 +1,0 @@
-s/centos:centos7.9.2009/centos:centos7/
-s/--depth 1//
-s/relese/release/
-s/Xmx512m/Xmx2048m/
-
