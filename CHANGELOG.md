@@ -1,5 +1,6 @@
 # FIWARE-pi
 
+- Update Ngsiproxy to 1.2.2 (#43)
 - Update WireCloud to 1.3.1 (#42)
 - Update documentation (#41)
 - Update STH-Comet to 2.10.0 (#40)

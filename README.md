@@ -334,7 +334,7 @@ sudo docker-compose up -d
 Run the following shell script to build Ngsiproxy.
 
 ```
-cd build/ngsiproxy/ngsiproxy1.2.0
+cd build/ngsiproxy/ngsiproxy1.2.2
 ./build.sh
 ```
 
@@ -445,9 +445,9 @@ docker pull fisuda/orion-ld:latest
 ```
 docker pull letsfiware/wirecloud:1.3.1
 ```
--   [ngsiproxy 1.2.0](https://hub.docker.com/r/letsfiware/ngsiproxy)
+-   [ngsiproxy 1.2.2](https://hub.docker.com/r/letsfiware/ngsiproxy)
 ```
-docker pull letsfiware/ngsiproxy:1.2.0
+docker pull letsfiware/ngsiproxy:1.2.2
 ```
 -   [Keyrock 7.9.2](https://hub.docker.com/r/letsfiware/idm)
 ```
