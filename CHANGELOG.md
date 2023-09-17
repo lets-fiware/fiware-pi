@@ -1,5 +1,6 @@
 # FIWARE-pi
 
+- Update IoT Agent for UL to 2.3.0 (#39)
 - Update IoT Agent for JSON to 2.3.0 (#38) 
 - Update Cygnus to 3.2.0 (#37)
 - ADD Perseo FE (#36)

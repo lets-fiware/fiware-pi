@@ -465,9 +465,9 @@ docker pull letsfiware/fiware-cygnus:3.2.0
 ```
 docker pull letsfiware/sth-comet:2.8.0
 ```
--  [iotagent-ul 1.13.0](https://hub.docker.com/r/letsfiware/iotagent-ul)
+-  [iotagent-ul 2.3.0](https://hub.docker.com/r/letsfiware/iotagent-ul)
 ```
-docker pull letsfiware/iotagent-ul:1.13.0
+docker pull letsfiware/iotagent-ul:2.3.0
 ```
 -  [iotagent-json 2.3.0](https://hub.docker.com/r/letsfiware/iotagent-json)
 ```
