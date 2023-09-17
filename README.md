@@ -315,7 +315,7 @@ $ curl localhost:1026/ngsi-ld/ex/v1/version
 Run the following shell script to build WireCloud.
 
 ```
-cd build/wirecloud/wirecloud1.3
+cd build/wirecloud/wirecloud1.3.1
 ./build.sh
 ```
 
@@ -441,9 +441,9 @@ docker pull letsfiware/orion:3.10.1
 ```
 docker pull fisuda/orion-ld:latest
 ```
--   [WireCloud 1.3](https://hub.docker.com/r/letsfiware/wirecloud)
+-   [WireCloud 1.3.1](https://hub.docker.com/r/letsfiware/wirecloud)
 ```
-docker pull letsfiware/wirecloud:1.3
+docker pull letsfiware/wirecloud:1.3.1
 ```
 -   [ngsiproxy 1.2.0](https://hub.docker.com/r/letsfiware/ngsiproxy)
 ```
