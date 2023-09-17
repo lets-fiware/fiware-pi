@@ -152,42 +152,42 @@ sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-compose-plu
 Run the following command to confirm that docker engine has been successfully installed.
 
 ```
-ubuntu@ubuntu:~$ sudo docker version
+$ sudo docker version
 Client: Docker Engine - Community
- Version:           20.10.14
- API version:       1.41
- Go version:        go1.16.15
- Git commit:        a224086
- Built:             Thu Mar 24 01:47:16 2022
+ Version:           24.0.6
+ API version:       1.43
+ Go version:        go1.20.7
+ Git commit:        ed223bc
+ Built:             Mon Sep  4 12:31:57 2023
  OS/Arch:           linux/arm64
  Context:           default
- Experimental:      true
 
 Server: Docker Engine - Community
  Engine:
-  Version:          20.10.14
-  API version:      1.41 (minimum version 1.12)
-  Go version:       go1.16.15
-  Git commit:       87a90dc
-  Built:            Thu Mar 24 01:45:35 2022
+  Version:          24.0.6
+  API version:      1.43 (minimum version 1.12)
+  Go version:       go1.20.7
+  Git commit:       1a79695
+  Built:            Mon Sep  4 12:31:57 2023
   OS/Arch:          linux/arm64
   Experimental:     false
  containerd:
-  Version:          1.5.11
-  GitCommit:        3df54a852345ae127d1fa3092b95168e4a88e2f8
+  Version:          1.6.22
+  GitCommit:        8165feabfdfe38c65b599c4993d227328c231fca
  runc:
-  Version:          1.0.3
-  GitCommit:        v1.0.3-0-gf46b6ba
+  Version:          1.1.8
+  GitCommit:        v1.1.8-0-g82f18fe
  docker-init:
   Version:          0.19.0
   GitCommit:        de40ad0
+ksmainte@ubuntu243 (192.168.12.243):~/contribution/fiware-pi (update/documentation *) (0)
 ```
 
 Run the following command to confirm that docker compose V2 has been successfully installed.
 
 ```
-ubuntu@ubuntu:~$ sudo docker compose version
-Docker Compose version v2.3.3
+$ sudo docker compose version
+Docker Compose version v2.21.0
 ```
 
 # How to build and run FIWARE GEs
@@ -199,21 +199,21 @@ Docker Compose version v2.3.3
 Run the following shell script to build Orion. The script includes some patches.
 
 ```
-cd build/orion/orion-3.6.0
+cd build/orion/orion-3.10.1
 ./build.sh
 ```
 
 ### How to run Orion
 
 Start up Orion and mongodb with the following docker-compose.yml file.
-The yml file is in build/orion/orion-3.6.0 directory.
+The yml file is in build/orion/orion-3.10.1 directory.
 
 ```
 version: "3"
 
 services:
   orion:
-    image: letsfiware/orion:3.6.0
+    image: letsfiware/orion:3.10.1
     ports:
       - "1026:1026"
     depends_on:
@@ -231,24 +231,24 @@ Run the following command to confirm that Orion has been successfully built.
 $ curl localhost:1026/version
 {
 "orion" : {
-  "version" : "3.6.0",
-  "uptime" : "0 d, 0 h, 0 m, 1 s",
-  "git_hash" : "973850279e63d58cb93dff751648af5ec6e05777",
-  "compile_time" : "Sun May 1 04:43:02 UTC 2022",
+  "version" : "3.10.1",
+  "uptime" : "0 d, 0 h, 0 m, 7 s",
+  "git_hash" : "9a80e06abe7f690901cf1586377acec02d40e303",
+  "compile_time" : "Thu Aug 10 10:20:17 UTC 2023",
   "compiled_by" : "root",
-  "compiled_in" : "4e336511670a",
-  "release_date" : "Sun May 1 04:43:02 UTC 2022",
+  "compiled_in" : "buildkitsandbox",
+  "release_date" : "Thu Aug 10 10:20:17 UTC 2023",
   "machine" : "aarch64",
-  "doc" : "https://fiware-orion.rtfd.io/en/3.6.0/",
+  "doc" : "https://fiware-orion.rtfd.io/en/3.10.1/",
   "libversions": {
      "boost": "1_74",
-     "libcurl": "libcurl/7.74.0 OpenSSL/1.1.1n zlib/1.2.11 brotli/1.0.9 libidn2/2.3.0 libpsl/0.21.0 (+libidn2/2.3.0) libssh2/1.9.0 nghttp2/1.43.0 librtmp/2.3",
-     "libmosquitto": "2.0.12",
-     "libmicrohttpd": "0.9.70",
+     "libcurl": "libcurl/7.74.0 OpenSSL/1.1.1n zlib/1.2.12 brotli/1.0.9 libidn2/2.3.0 libpsl/0.21.0 (+libidn2/2.3.0) libssh2/1.9.0 nghttp2/1.43.0 librtmp/2.3",
+     "libmosquitto": "2.0.15",
+     "libmicrohttpd": "0.9.76",
      "openssl": "1.1",
      "rapidjson": "1.1.0",
-     "mongoc": "1.17.4",
-     "bson": "1.17.4"
+     "mongoc": "1.23.1",
+     "bson": "1.23.1"
   }
 }
 }
@@ -433,9 +433,9 @@ cd build/perseo-fe
 
 # Pre-Built FIWARE GEs Docker Images
 
--   [Orion 3.0.0](https://hub.docker.com/r/letsfiware/orion)
+-   [Orion 3.10.1](https://hub.docker.com/r/letsfiware/orion)
 ```
-docker pull letsfiware/orion:3.0.0
+docker pull letsfiware/orion:3.10.1
 ```
 -   [Orion-LD](https://hub.docker.com/r/fisuda/orion-ld)
 ```
