@@ -461,9 +461,9 @@ docker pull letsfiware/pep-proxy:7.9.2
 ```
 docker pull letsfiware/fiware-cygnus:3.2.0
 ```
--  [sth-comet 2.8.0](https://hub.docker.com/r/letsfiware/sth-comet)
+-  [sth-comet 2.10.0](https://hub.docker.com/r/letsfiware/sth-comet)
 ```
-docker pull letsfiware/sth-comet:2.8.0
+docker pull letsfiware/sth-comet:2.10.0
 ```
 -  [iotagent-ul 2.3.0](https://hub.docker.com/r/letsfiware/iotagent-ul)
 ```
