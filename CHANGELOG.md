@@ -1,5 +1,6 @@
 # FIWARE-pi
 
+- Update documentation (#41)
 - Update STH-Comet to 2.10.0 (#40)
 - Update IoT Agent for UL to 2.3.0 (#39)
 - Update IoT Agent for JSON to 2.3.0 (#38) 
