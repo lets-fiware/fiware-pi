@@ -29,6 +29,7 @@ The purpose of this project is to run FIWARE GEs on Raspberry Pi.
     -   [STH-Comet](#sth-comet)
     -   [IoT Agent UL](#iot-agent-ul)
     -   [IoT Agent JSON](#iot-agent-json)
+    -   [QuantumLeap](#quantumleap)
 -   [Pre-Built FIWARE GEs Docker Images](#pre-built-fiware-ges-docker-images)
 -   [Third-party Docker Images](#third-party-docker-images)
     -   [MySQL](#mysql)
@@ -401,6 +402,15 @@ cd build/iotagent-for-json
 ./build.sh
 ```
 
+## QuantumLeap
+
+Run the following shell script to build QuantumLeap.
+
+```
+cd build/quantumleap
+./build.sh
+```
+
 # Pre-Built FIWARE GEs Docker Images
 
 -   [Orion 3.0.0](https://hub.docker.com/r/letsfiware/orion)
@@ -450,6 +460,11 @@ docker pull letsfiware/iotagent-ul:1.13.0
 -  [iotagent-json 1.17.0](https://hub.docker.com/r/letsfiware/iotagent-json)
 ```
 docker pull letsfiware/iotagent-json:1.17.0
+```
+
+-  [QuantumLeap](https://hub.docker.com/r/letsfiware/quantumleap)
+```
+docker pull letsfiware/quantumleap:latest
 ```
 
 # Third-party Docker Images
