@@ -30,6 +30,7 @@ The purpose of this project is to run FIWARE GEs on Raspberry Pi.
     -   [IoT Agent UL](#iot-agent-ul)
     -   [IoT Agent JSON](#iot-agent-json)
     -   [QuantumLeap](#quantumleap)
+    -   [Perseo Core](#perseo-core)
 -   [Pre-Built FIWARE GEs Docker Images](#pre-built-fiware-ges-docker-images)
 -   [Third-party Docker Images](#third-party-docker-images)
     -   [MySQL](#mysql)
@@ -411,6 +412,16 @@ cd build/quantumleap
 ./build.sh
 ```
 
+## Perseo Core
+
+Run the following shell script to build Perseo Core.
+
+```
+cd build/perseo-core
+./build.sh
+```
+
+
 # Pre-Built FIWARE GEs Docker Images
 
 -   [Orion 3.0.0](https://hub.docker.com/r/letsfiware/orion)
@@ -465,6 +476,11 @@ docker pull letsfiware/iotagent-json:1.17.0
 -  [QuantumLeap](https://hub.docker.com/r/letsfiware/quantumleap)
 ```
 docker pull letsfiware/quantumleap:latest
+```
+
+-  [Perseo Core 1.13.0](https://hub.docker.com/r/letsfiware/quantumleap)
+```
+docker pull letsfiware/perseo-core:1.13.0
 ```
 
 # Third-party Docker Images
