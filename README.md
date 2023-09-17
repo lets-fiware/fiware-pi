@@ -457,17 +457,9 @@ docker pull letsfiware/idm:7.9.2
 ```
 docker pull letsfiware/pep-proxy:7.9.2
 ```
--  [cygnus-common 1.18.3](https://hub.docker.com/r/letsfiware/cygnus-common)
+-  [Cygnus 3.2.0](https://hub.docker.com/r/letsfiware/fiware-cygnus)
 ```
-docker pull letsfiware/cygnus-common:1.18.3
-```
--  [cygnus-ngsi 1.18.3](https://hub.docker.com/r/letsfiware/cygnus-ngsi)
-```
-docker pull letsfiware/cygnus-ngsi:1.18.3
-```
--  [cygnus-twitter 1.18.3](https://hub.docker.com/r/letsfiware/cygnus-twitter)
-```
-docker pull letsfiware/cygnus-twitter:1.18.3
+docker pull letsfiware/fiware-cygnus:3.2.0
 ```
 -  [sth-comet 2.8.0](https://hub.docker.com/r/letsfiware/sth-comet)
 ```
