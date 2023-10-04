@@ -1,5 +1,5 @@
 #!/bin/sh
-VER=${1:-2.3.0}
+VER=${1:-2.4.2}
 DIR=iotagent-ul
 if [ -e "${DIR}" ]; then
   rm -fr "${DIR}"
