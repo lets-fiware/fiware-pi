@@ -1,5 +1,6 @@
 # FIWARE-pi
 
+- Update IoT Agent for JSON to 2.4.2 (#46) 
 - Update IoT Agent for UL to 2.4.2 (#45)
 - Amend URL (#44)
 - Update Ngsiproxy to 1.2.2 (#43)

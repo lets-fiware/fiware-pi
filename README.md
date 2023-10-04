@@ -437,41 +437,50 @@ cd build/perseo-fe
 ```
 docker pull letsfiware/orion:3.10.1
 ```
+
 -   [Orion-LD](https://hub.docker.com/r/fisuda/orion-ld)
 ```
 docker pull fisuda/orion-ld:latest
 ```
+
 -   [WireCloud 1.3.1](https://hub.docker.com/r/letsfiware/wirecloud)
 ```
 docker pull letsfiware/wirecloud:1.3.1
 ```
+
 -   [ngsiproxy 1.2.2](https://hub.docker.com/r/letsfiware/ngsiproxy)
 ```
 docker pull letsfiware/ngsiproxy:1.2.2
 ```
+
 -   [Keyrock 7.9.2](https://hub.docker.com/r/letsfiware/idm)
 ```
 docker pull letsfiware/idm:7.9.2
 ```
+
 -   [Wilma 7.9.2](https://hub.docker.com/r/letsfiware/pep-proxy)
 ```
 docker pull letsfiware/pep-proxy:7.9.2
 ```
+
 -  [Cygnus 3.2.0](https://hub.docker.com/r/letsfiware/fiware-cygnus)
 ```
 docker pull letsfiware/fiware-cygnus:3.2.0
 ```
+
 -  [sth-comet 2.10.0](https://hub.docker.com/r/letsfiware/sth-comet)
 ```
 docker pull letsfiware/sth-comet:2.10.0
 ```
--  [iotagent-ul 2.3.0](https://hub.docker.com/r/letsfiware/iotagent-ul)
+
+-  [iotagent-ul 2.4.2](https://hub.docker.com/r/letsfiware/iotagent-ul)
 ```
 docker pull letsfiware/iotagent-ul:2.4.2
 ```
--  [iotagent-json 2.3.0](https://hub.docker.com/r/letsfiware/iotagent-json)
+
+-  [iotagent-json 2.4.2](https://hub.docker.com/r/letsfiware/iotagent-json)
 ```
-docker pull letsfiware/iotagent-json:2.3.0
+docker pull letsfiware/iotagent-json:2.4.2
 ```
 
 -  [QuantumLeap](https://hub.docker.com/r/letsfiware/quantumleap)

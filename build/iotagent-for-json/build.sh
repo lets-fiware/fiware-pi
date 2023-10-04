@@ -1,6 +1,6 @@
 #!/bin/sh
 set -ue
-VER=${1:-2.3.0}
+VER=${1:-2.4.2}
 DIR=iotagent-json
 if [ "${DIR}" ]; then
   rm -fr "${DIR}"
