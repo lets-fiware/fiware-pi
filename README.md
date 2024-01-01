@@ -524,5 +524,5 @@ cd build/third-party/elasticsearch-2.4
 
 ## Copyright and License
 
-Copyright (c) 2020-2023 Kazuhito Suda
+Copyright (c) 2020-2024 Kazuhito Suda
 Licensed under the MIT license.
