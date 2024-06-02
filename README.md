@@ -478,9 +478,9 @@ docker pull letsfiware/sth-comet:2.11.0
 docker pull letsfiware/iotagent-ul:2.4.2
 ```
 
--  [iotagent-json 2.4.2](https://hub.docker.com/r/letsfiware/iotagent-json)
+-  [iotagent-json 3.4.0](https://hub.docker.com/r/letsfiware/iotagent-json)
 ```
-docker pull letsfiware/iotagent-json:2.4.2
+docker pull letsfiware/iotagent-json:3.4.0
 ```
 
 -  [QuantumLeap](https://hub.docker.com/r/letsfiware/quantumleap)
