@@ -1,5 +1,6 @@
 # FIWARE-pi
 
+- Update Cygnus to 3.8.0 (#49)
 - Update Orion to 3.12.0 (#48)
 - Update copyright date (#47)
 - Update IoT Agent for JSON to 2.4.2 (#46) 
