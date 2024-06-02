@@ -206,7 +206,7 @@ cd build/orion/orion-3.12.0
 ### How to run Orion
 
 Start up Orion and mongodb with the following docker-compose.yml file.
-The yml file is in build/orion/orion-3.10.1 directory.
+The yml file is in build/orion/orion-3.12.0 directory.
 
 ```
 version: "3"
@@ -463,9 +463,9 @@ docker pull letsfiware/idm:7.9.2
 docker pull letsfiware/pep-proxy:7.9.2
 ```
 
--  [Cygnus 3.2.0](https://hub.docker.com/r/letsfiware/fiware-cygnus)
+-  [Cygnus 3.8.0](https://hub.docker.com/r/letsfiware/fiware-cygnus)
 ```
-docker pull letsfiware/fiware-cygnus:3.2.0
+docker pull letsfiware/fiware-cygnus:3.8.0
 ```
 
 -  [sth-comet 2.10.0](https://hub.docker.com/r/letsfiware/sth-comet)
