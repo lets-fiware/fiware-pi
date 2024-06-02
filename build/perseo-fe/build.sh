@@ -1,5 +1,5 @@
 #!/bin/sh
-VER=${1:-1.27.0}
+VER=${1:-1.30.0}
 if [ -e "perseo-fe" ]; then
   rm -fr perseo-fe
 fi
