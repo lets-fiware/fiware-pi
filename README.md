@@ -483,9 +483,9 @@ docker pull letsfiware/iotagent-ul:3.4.0
 docker pull letsfiware/iotagent-json:3.4.0
 ```
 
--  [QuantumLeap](https://hub.docker.com/r/letsfiware/quantumleap)
+-  [QuantumLeap 1.0.0](https://hub.docker.com/r/letsfiware/quantumleap)
 ```
-docker pull letsfiware/quantumleap:latest
+docker pull letsfiware/quantumleap:1.0.0
 ```
 
 -  [Perseo Core 1.13.0](https://hub.docker.com/r/letsfiware/quantumleap)
