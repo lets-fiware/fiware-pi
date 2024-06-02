@@ -1,5 +1,6 @@
 # FIWARE-pi
 
+- Update STH-Comet to 2.11.0 (#50)
 - Update Cygnus to 3.8.0 (#49)
 - Update Orion to 3.12.0 (#48)
 - Update copyright date (#47)

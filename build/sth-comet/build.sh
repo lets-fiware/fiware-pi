@@ -1,5 +1,5 @@
 #!/bin/sh
-VER=${1:-2.10.0}
+VER=${1:-2.11.0}
 if [ -e "fiware-sth-comet" ]; then
   rm -fr fiware-sth-comet
 fi
