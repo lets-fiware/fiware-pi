@@ -1,5 +1,7 @@
 # FIWARE-pi
 
+- Update Orion to 3.12.0 (#48)
+- Update copyright date (#47)
 - Update IoT Agent for JSON to 2.4.2 (#46) 
 - Update IoT Agent for UL to 2.4.2 (#45)
 - Amend URL (#44)
