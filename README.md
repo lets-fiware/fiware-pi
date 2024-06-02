@@ -493,9 +493,9 @@ docker pull letsfiware/quantumleap:latest
 docker pull letsfiware/perseo-core:1.13.0
 ```
 
--  [Perseo FE 1.27.0](https://hub.docker.com/r/letsfiware/quantumleap)
+-  [Perseo FE 1.30.0](https://hub.docker.com/r/letsfiware/quantumleap)
 ```
-docker pull letsfiware/perseo-fe:1.27.0
+docker pull letsfiware/perseo-fe:1.30.0
 ```
 
 # Third-party Docker Images

@@ -1,6 +1,7 @@
 # FIWARE-pi
 
-- Update IoT Agent for UL to 3.4.0 (#25)
+- Update Perseo FE to 1.30.0 (#53)
+- Update IoT Agent for UL to 3.4.0 (#52)
 - Update IoT Agent for JSON to 3.4.0 (#51)
 - Update STH-Comet to 2.11.0 (#50)
 - Update Cygnus to 3.8.0 (#49)
