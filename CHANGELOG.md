@@ -1,5 +1,6 @@
 # FIWARE-pi
 
+- Update Orion to 4.0.0 (#55)
 - Update QuantumLeap to 1.0.0 (#54)
 - Update Perseo FE to 1.30.0 (#53)
 - Update IoT Agent for UL to 3.4.0 (#52)

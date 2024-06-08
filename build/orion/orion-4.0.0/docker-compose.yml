@@ -1,0 +1,12 @@
+services:
+  orion:
+    image: letsfiware/orion:4.0.0
+    ports:
+      - "1026:1026"
+    depends_on:
+      - mongo
+    command: -dbURI mongodb://mongo
+
+  mongo:
+    image: mongo:6.0
+    command: --nojournal
